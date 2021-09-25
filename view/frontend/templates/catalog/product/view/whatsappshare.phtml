@@ -1,0 +1,45 @@
+<?php
+/*
+ * @Author      Hemant Singh
+ * @Developer   Hemant Singh
+ * @Module      Wishusucess_Whatsappshare
+ * @copyright   Copyright (c) Wishusucess (http://www.wishusucess.com/)
+ */
+?>
+<?php
+$helper = $this->helperInit();
+
+$objectManagerInstance = \Magento\Framework\App\ObjectManager::getInstance();
+$url = $objectManagerInstance -> get('Magento\Framework\UrlInterface');
+$currentUrl = $url -> getCurrentUrl();
+
+$active = $helper->whatsappshare_enable();
+$size = $helper->whatsappshare_size();
+$text = $helper->whatsappshare_text();
+
+$size_class = "whatsapp_small";
+if($size == 1) {
+	$size_class = "whatsapp_small";
+} else if($size == 2) {
+	$size_class = "whatsapp_medium";
+} else if($size == 3) {
+	$size_class = "whatsapp_large";
+}
+
+
+
+if($helper->isMobile() || $helper->isTablet()) {
+	/* <a href="whatsapp://send?text=<?php echo $text?>%0A%0A<?php echo "",$currentUrl."%3Futm_source%3Dwhatsappshare";?>" class=""><?php echo __('Share');?></a> */
+	?>
+	<div class="whatsapp_share <?php echo $size_class; ?>" alt="Enquire" title="Enquire">
+		<a href="whatsapp://send?text=<?php echo $text?>%0A%0A<?php echo "",$currentUrl."";?>"><?php echo __('Enquire');?></a>
+	</div>	
+	<?php 
+} else {
+	?>
+	<div class="whatsapp_share <?php echo $size_class; ?>" alt="Enquire" title="Enquire">
+		<a href="https://web.whatsapp.com/send?text=<?php echo $text?>%0A%0A<?php echo "",$currentUrl."";?>" target="_blank"><?php echo __('Enquire');?></a>
+	</div>
+	<?php
+}
+?>

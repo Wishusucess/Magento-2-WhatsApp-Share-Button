@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * @Author      Hemant Singh
+ * @Developer   Hemant Singh
+ * @Module      Wishusucess_Whatsappshare
+ * @copyright   Copyright (c) Wishusucess (http://www.wishusucess.com/)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <whatsappshare_tab>
+            <whatsappshare_setting>
+				<whatsappshare_active>1</whatsappshare_active>
+				<whatsappshare_size>2</whatsappshare_size>
+				<whatsappshare_text><![CDATA[Hey, Check this product I liked!]]></whatsappshare_text>
+            </whatsappshare_setting>
+        </whatsappshare_tab>
+    </default>
+</config>

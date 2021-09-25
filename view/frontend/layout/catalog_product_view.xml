@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/*
+ * @Author      Hemant Singh
+ * @Developer   Hemant Singh
+ * @Module      Wishusucess_Whatsappshare
+ * @copyright   Copyright (c) Wishusucess (http://www.wishusucess.com/)
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<head>
+		<css src="Wishusucess_Whatsappshare::css/whatsappshare/whatsappshare.css" />
+	</head>
+	<body>
+		<referenceContainer name="product.info.addtocart">
+			<block class="Wishusucess\Whatsappshare\Block\Whatsappshare" name="whatsapp.share" as="whatsappshare" after="-" template="catalog/product/view/whatsappshare.phtml" />
+		</referenceContainer>
+	</body>
+</page>

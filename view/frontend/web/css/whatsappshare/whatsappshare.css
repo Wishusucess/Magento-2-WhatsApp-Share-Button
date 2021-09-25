@@ -1,0 +1,9 @@
+/**
+ * 
+ * @package Sparx_Whatsappshare
+ */
+
+.whatsapp_share a {width: 100%;display: block;height: inherit;font-size: 0px;}
+.whatsapp_small {background: url("../../images/whatsappsmall.png") no-repeat scroll 0 0 !important;height:48px;width: 48px;}
+.whatsapp_medium {background:url("../../images/whatsappmedium.png") no-repeat scroll 0 0 !important;width:167px;height:42px;}
+.whatsapp_large {background:url("../../images/whatsapplarge.png") no-repeat scroll 0 0 !important;width:218px;height:40px;}
